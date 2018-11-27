@@ -13,4 +13,9 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
+  search(searchText): void {
+    if(searchText && searchText.length <= 30)
+    console.log("Search request for => "+searchText);
+  }
+
 }
