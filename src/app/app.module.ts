@@ -11,13 +11,15 @@ import { HeaderComponent } from './header/header.component';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
 import { SearchComponent } from './search/search.component';
+import { ListitemComponent } from './search/listitem/listitem.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    SearchComponent
+    SearchComponent,
+    ListitemComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +30,7 @@ import { SearchComponent } from './search/search.component';
       InMemoryDataService, { dataEncapsulation: false }
     )
   ],
-  providers: [],
+  providers: [ ListitemComponent ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

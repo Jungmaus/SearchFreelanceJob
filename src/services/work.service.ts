@@ -10,7 +10,7 @@ import Work from 'src/models/work';
 export class WorkService {
 
   constructor() {
-    private http: HttpClient;
+    // private http: HttpClient;
    }
 
   //  getWorks(): Observable<Work[]> {

@@ -1,4 +1,14 @@
 
-<div class="col-md-10 cent">
+<div *ngIf="notFound" class="col-md-6 cent">
+    <label class="header">We can't found a freelance job</label>
+    <label class="again">Search Again</label>
+    <button (click)="search(searchq)" class="btn btn-outline-info my-2 my-sm-0 btnsearch" type="button">Search</button>  
+    <input class="form-control search" [(ngModel)]="searchq" maxlength="30">
+    <img src="../../assets/images/search/space.png">
+</div>
+
+<div class="col-md-10 list">
 
 </div>
+<br><br>
+<app-listitem model="{ id:'123', title:'title', job_status:'jobStatus', job_type:'jobType', category:'category', date_created:'08.06.2000'  }"></app-listitem>
