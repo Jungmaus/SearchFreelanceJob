@@ -42,5 +42,6 @@ img {
 .list {
     margin:0 auto;
     border:1px black groove;
-    height: 500px;
+    height: 600px;
+    overflow-y: scroll;
 }

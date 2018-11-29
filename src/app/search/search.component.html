@@ -7,8 +7,15 @@
     <img src="../../assets/images/search/space.png">
 </div>
 
-<div class="col-md-10 list">
-
-</div>
-<br><br>
-<app-listitem model="{ id:'123', title:'title', job_status:'jobStatus', job_type:'jobType', category:'category', date_created:'08.06.2000'  }"></app-listitem>
+<div *ngIf="!notFound" class="col-md-10 list">
+    <div *ngFor="let item of listItem">
+            <div class="card" style="width: 26rem;margin-top: 1%;">
+                    <div class="card-body">
+                      <h5 class="card-title">{{item.title}}</h5>
+                      <h6 class="card-subtitle mb-2 text-muted">{{item.category}} - {{item.job_status}} - {{item.job_type}}</h6>
+                      <div class="card-text"><div *ngFor="let skill of item.skills" class="col-md-5 alert alert-info" style="margin-left:1%;">{{skill}}</div><div *ngFor="let skill of item.skills" class="col-md-5 alert alert-info" style="margin-left:1%;">{{skill}}</div></div>
+                      <a href="{{item.url}}" class="card-link"><span class="btn btn-primary">Go to job</span></a>
+                    </div>
+                  </div>
+                </div>
+            </div>

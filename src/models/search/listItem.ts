@@ -4,5 +4,7 @@ export default class ListItem {
     job_status:string;
     job_type:string;
     category:string;
+    skills: string[];
     date_created:string;
+    url: string;
 }
